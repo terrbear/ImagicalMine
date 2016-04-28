@@ -26,15 +26,15 @@ class NoteblockSound extends GenericSound{
 	public static function getRandomSound(){
 		switch(true){
 			case 0:
-			self::INSTRUMENT_PIANO;
+			    self::INSTRUMENT_PIANO;
 			case 1: 
-			self::INSTRUMENT_BASS_DRUM;
+			    self::INSTRUMENT_BASS_DRUM;
 			case 2:
-			self::INSTRUMENT_CLICK;
+			    self::INSTRUMENT_CLICK;
 			case 3:
-			self::INSTRUMENT_TABOUR;
+			    self::INSTRUMENT_TABOUR;
 			case 4:
-			self::INSTRUMENT_BASS;
+			    self::INSTRUMENT_BASS;
 		}
 	}
 
