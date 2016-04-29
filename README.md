@@ -40,6 +40,7 @@ You need to request the hosting company you're using to add in ImagicalMine. If 
 * __[FakaHeda.eu](http://www.fakaheda.eu)__
 * __[24serv.pro](https://24serv.pro)__ 
 * __[Roxservers.com](https://roxservers.com)__
+* __[Nitrado.net](https://server.nitrado.net/gameserver-mieten/minecraft-pocket-edition)__
 
 ## Resources
 
