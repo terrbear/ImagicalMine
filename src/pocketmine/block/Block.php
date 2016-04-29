@@ -193,8 +193,8 @@ class Block extends Position implements Metadatable{
 
 	const UNLIT_REDSTONE_REPEATER = 93;
 	const LIT_REDSTONE_REPEATER = 94;
-	const UNPOWERED_REPEATER = 93;
-	const POWERED_REPEATER = 94;
+	//const UNPOWERED_REPEATER = 93;
+	//const POWERED_REPEATER = 94;
 
 	const STAINED_GLASS = 95; //INVISIBLE BEDROCK ID
 
@@ -434,11 +434,11 @@ class Block extends Position implements Metadatable{
 			self::$hardness = new \SplFixedArray(256);
 			self::$transparent = new \SplFixedArray(256);
 			/***************************************************************************************************\
-|------------------------------->>>> Location of // is important!! <<<<-----------------------------|
-|			// <-- this level of indentation means that it is not yet in pocketmine     |
-|		// <-- This level of indentation means the class is not yet made                    |
-|------------------------------->>>> Location of // is important!! <<<<-----------------------------|
-\***************************************************************************************************/
+            |------------------------------->>>> Location of // is important!! <<<<-----------------------------|
+            |			// <-- this level of indentation means that it is not yet in pocketmine     |
+            |		// <-- This level of indentation means the class is not yet made                    |
+            |------------------------------->>>> Location of // is important!! <<<<-----------------------------|
+            \***************************************************************************************************/
 			self::$list[self::AIR] = Air::class;
 			self::$list[self::STONE] = Stone::class;
 			self::$list[self::GRASS] = Grass::class;
@@ -541,10 +541,10 @@ class Block extends Position implements Metadatable{
 
 			self::$list[self::LIT_PUMPKIN] = LitPumpkin::class;
 			self::$list[self::CAKE_BLOCK] = Cake::class;
-			//self::$list[self::LIT_REDSTONE_REPEATER] = LitRedstoneRepeater::class;
-			//self::$list[self::UNLIT_REDSTONE_REPEATER] = UnlitRedstoneRepeater::class;
-			self::$list[self::POWERED_REPEATER] = PoweredRepeater::class;
-			self::$list[self::UNPOWERED_REPEATER] = UnpoweredRepeater::class;
+			self::$list[self::LIT_REDSTONE_REPEATER] = LitRedstoneRepeater::class;
+			self::$list[self::UNLIT_REDSTONE_REPEATER] = UnlitRedstoneRepeater::class;
+			//self::$list[self::POWERED_REPEATER] = PoweredRepeater::class;
+			//self::$list[self::UNPOWERED_REPEATER] = UnpoweredRepeater::class;
 			//self::$list[self::STAINED_GLASS] = StainedGlass::class;
 
 			self::$list[self::TRAPDOOR] = Trapdoor::class;
@@ -1062,12 +1062,10 @@ class Block extends Position implements Metadatable{
 	}
 
 
-
-	/**
-	 *
-	 * @param unknown $type
-	 * @param unknown $power
-	 */
+    /**
+     * @param $type
+     * @param $power
+     */
 	public function setRedstoneUpdateList($type, $power) {
 		return;
 	}
@@ -1194,11 +1192,10 @@ class Block extends Position implements Metadatable{
 	}
 
 
-	/**
-	 *
-	 * @param unknown $type
-	 * @param unknown $power
-	 */
+    /**
+     * @param $type
+     * @param $power
+     */
 	public function BroadcastRedstoneUpdate($type, $power) {
 		if ($type == Level::REDSTONE_UPDATE_BLOCK_CHARGE or $type == Level::REDSTONE_UPDATE_BLOCK_UNCHARGE) {
 			for ($side = 0; $side <= 5; $side++) {

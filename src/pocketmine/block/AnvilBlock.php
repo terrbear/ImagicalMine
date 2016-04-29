@@ -96,17 +96,17 @@ class AnvilBlock extends Fallable{
 	public function getName() {
 		static $names = [
 			self::TYPE_ANVIL => "Anvil",
-			1 => "Anvil",
-			2 => "Anvil",
-			3 => "Anvil",
+			    1 => "Anvil",
+			    2 => "Anvil",
+			    3 => "Anvil",
 			self::TYPE_SLIGHTLY_DAMAGED_ANVIL => "Slighty Damaged Anvil",
-			5 => "Slighty Damaged Anvil",
-			6 => "Slighty Damaged Anvil",
-			7 => "Slighty Damaged Anvil",
+			    5 => "Slighty Damaged Anvil",
+			    6 => "Slighty Damaged Anvil",
+			    7 => "Slighty Damaged Anvil",
 			self::TYPE_VERY_DAMAGED_ANVIL => "Very Damaged Anvil",
-			9 => "Very Damaged Anvil",
-			10 => "Very Damaged Anvil",
-			11 => "Very Damaged Anvil"
+			    9 => "Very Damaged Anvil",
+			    10 => "Very Damaged Anvil",
+			    11 => "Very Damaged Anvil"
 		];
 		return $names[$this->meta];
 	}
@@ -157,9 +157,8 @@ class AnvilBlock extends Fallable{
 			}elseif ($damage >= 8 && $damage <= 11) { //Very Damaged Anvil
 				return [[$this->id, $this->meta & 0x08, 1]];
 			}
-		}else {
-			return [];
-		}
+		} 
+        return [];
 	}
 
 

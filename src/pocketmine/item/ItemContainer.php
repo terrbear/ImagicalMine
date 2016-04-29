@@ -659,21 +659,20 @@ class ItemContainer {
 
 	/**
 	 *
-	 * @param Item    $item
+	 * @param Item $item
 	 */
 	public static function addCreativeItem(Item $item) {
 		self::$creative[] = self::get($item->getId(), $item->getDamage());
 	}
 
 
-	/**
-	 *
-	 * @param unknown $id
-	 * @param unknown $meta  (optional)
-	 * @param unknown $count (optional)
-	 * @param unknown $tags  (optional)
-	 * @return unknown
-	 */
+    /**
+     * @param $id
+     * @param int $meta
+     * @param int $count
+     * @param string $tags
+     * @return unknown
+     */
 	public static function get($id, $meta = 0, $count = 1, $tags = "") {
 		try{
 			$class = self::$list[$id];
