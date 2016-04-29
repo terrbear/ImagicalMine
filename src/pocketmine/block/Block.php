@@ -191,8 +191,8 @@ class Block extends Position implements Metadatable{
 	const JACK_O_LANTERN = 91;
 	const CAKE_BLOCK = 92;
 
-	const UNLIT_REDSTONE_REPEATER = 93;
-	const LIT_REDSTONE_REPEATER = 94;
+	//const UNLIT_REDSTONE_REPEATER = 93; not needed - replaced by unpowered repeater
+	//const LIT_REDSTONE_REPEATER = 94; not needed - replaced by powered repeater
 	const UNPOWERED_REPEATER = 93;
 	const POWERED_REPEATER = 94;
 
