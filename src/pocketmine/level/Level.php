@@ -3295,8 +3295,8 @@ class Level implements ChunkManager, Metadatable{
 	 *
 	 * @return int
 	 */
-	public function getSeed() : int{
-		return (int)$this->provider->getSeed();
+	public function getSeed(): string{
+		return (string) $this->provider->getSeed();
 	}
 
 
@@ -3305,7 +3305,7 @@ class Level implements ChunkManager, Metadatable{
 	 *
 	 * @param int     $seed
 	 */
-	public function setSeed(int $seed) {
+	public function setSeed(string $seed) {
 		$this->provider->setSeed($seed);
 	}
 
